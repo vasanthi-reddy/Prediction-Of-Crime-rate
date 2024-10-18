@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Crime Rate Analysis</title>
+  <link rel="stylesheet" href="styles1.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Merriweather:ital,wght@1,300&display=swap">
+   <!-- this was taken from google, inorder to style our fonts -->
+   <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap">
+   <!-- this was taken from google, inorder to style our fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+
+	<h1 class="title-heading">Crime Rate Analysis</h1>
+      <center>
+    <form class="change" action="{{ url_for('predict')}}" method="post">
+        <input class="text-box-align" type="text" name="CRIME HEAD" placeholder="CRIME HEAD" required="required" /><br><br>
+		    <input class="text-box-align" type="text" name="2001" placeholder="2001" required="required" /> <br><br>
+		    <input class="text-box-align" type="text" name="2002" placeholder="2002" required="required" /> <br><br>
+		    <input class="text-box-align" type="text" name="2003" placeholder="2003" required="required" /> <br><br>
+		    <input class="text-box-align" type="text" name="2004" placeholder="2004" required="required" /> <br><br>
+		    <input class="text-box-align" type="text" name="2005" placeholder="2005" required="required" /> <br><br>
+		    <input class="text-box-align" type="text" name="2006" placeholder="2006" required="required" /> <br><br>
+		    <input class="text-box-align" type="text" name="2007" placeholder="2007" required="required" /> <br><br>
+		    <input class="text-box-align" type="text" name="2008" placeholder="2008" required="required" /> <br><br>
+		    <input class="text-box-align" type="text" name="2009" placeholder="2009" required="required" /> <br><br>
+        <input class="text-box-align" type="text" name="2010" placeholder="2010" required="required" /> <br><br>
+        <input class="text-box-align" type="text" name="2011" placeholder="2011" required="required" /> <br><br>
+        <input class="text-box-align" type="text" name="2012" placeholder="2012" required="required" /> <br><br>
+        <br><br>
+        <button class="text-box-align" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction_text }}
+   </center>
+ </div>
+
+
+</body>
+</html>
